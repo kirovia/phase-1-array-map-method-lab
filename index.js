@@ -13,8 +13,8 @@ const tutorials = [
 
 // this function takes in a string and returns the same string with the first characters capitalized
 const capitalizeAllWords = string => {
-  string = string[0].toUpperCase() + string.slice(1);
   const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  string = string[0].toUpperCase() + string.slice(1);
   for (let letter of alphabet) {
     string = string.replaceAll(' ' + letter, ' ' + letter.toUpperCase());
   }
@@ -22,6 +22,4 @@ const capitalizeAllWords = string => {
 }
 
 // function to pass npm test
-const titleCased = () => {
-  return tutorials.map(capitalizeAllWords);
-}
+const titleCased = () => tutorials.map(capitalizeAllWords)
